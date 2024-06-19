@@ -10,12 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController()
 @AllArgsConstructor
 public class RomanNumeralConverterController {
-    private final RomanNumeralConverterService romanNumeralConverterService;
-
     @GetMapping("/romannumeral")
     public ResponseEntity<String> getRomanNumeral(@RequestParam Integer query) {
         try {
-            return ResponseEntity.ok("you made it bruh!");
+            var romanNumeral = RomanNumeralConverterService.convertToRomanNumerals(query);
+            return ResponseEntity.ok(String.format("converted %s into %s", query, romanNumeral));
         } catch (IllegalArgumentException exception) {
             return ResponseEntity.badRequest().body("The number you provided is not representable in standard roman numerals");
         }
