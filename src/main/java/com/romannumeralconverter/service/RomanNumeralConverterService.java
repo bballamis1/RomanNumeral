@@ -73,60 +73,6 @@ public class RomanNumeralConverterService {
             setOnesPart(arabicNumeral, romanNumeral);
         }
 
-//        if (arabicNumeral >= 1000) {
-//            thousandsPlace = arabicNumeral / 1000;
-//            var thousandsMod = arabicNumeral % 1000;
-//            hundredsPlace = thousandsMod / 100;
-//            var hundredsMod = thousandsMod % 100;
-//            tensPlace = hundredsMod / 10;
-//            onesPlace = hundredsMod % 10;
-//        } else if (arabicNumeral < 1000 && arabicNumeral >= 100) {
-//            thousandsPlace = null;
-//            hundredsPlace = arabicNumeral / 100;
-//            var hundredsMod = arabicNumeral % 100;
-//            tensPlace = hundredsMod / 10;
-//            onesPlace = hundredsMod % 10;
-//        } else if (arabicNumeral < 100 && arabicNumeral >= 10) {
-//            thousandsPlace = null;
-//            hundredsPlace = null;
-//            tensPlace = arabicNumeral / 10;
-//            onesPlace = arabicNumeral % 10;
-//        } else {
-//            thousandsPlace = null;
-//            hundredsPlace = null;
-//            tensPlace = null;
-//            onesPlace = arabicNumeral;
-//        }
-
-//        if (thousandsPlace != null) {
-//            for (int i = 0; i < thousandsPlace; i++) {
-//                romanNumeral.append('M');
-//            }
-//        }
-//        if (hundredsPlace != null) {
-//            if (hundredsPlace == 9) {
-//                romanNumeral.append("CM");
-//            } else if (hundredsPlace == 4) {
-//                romanNumeral.append("CD");
-//            } else {
-//                for (int i = 0; i < hundredsPlace; i++) {
-//                    romanNumeral.append('C');
-//                }
-//            }
-//        }
-//        if (tensPlace != null) {
-//            if (tensPlace == 9) {
-//                romanNumeral.append("XC");
-//            } else if (tensPlace == 4) {
-//                romanNumeral.append("XL");
-//            } else {
-//                for (int i = 0; i < tensPlace; i++) {
-//                    romanNumeral.append('X');
-//                }
-//            }
-//        }
-//        romanNumeral.append(romanNumeralOnesParts.get(onesPlace));
-        // dope ass logic here
         return romanNumeral.toString();
     }
 
