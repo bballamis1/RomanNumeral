@@ -18,5 +18,7 @@ src/main/java/com/romannumeralconverter/ with a package to contain the web contr
 
 ### Dependencies:
 lombok for ease of use
+
 log4j for logging
+
 JUnit for testing, which came along with spring-boot-starter-test
