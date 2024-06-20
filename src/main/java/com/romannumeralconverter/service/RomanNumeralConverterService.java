@@ -52,6 +52,8 @@ public class RomanNumeralConverterService {
     }
 
     public static String convertToRomanNumerals(Integer arabicNumeral) {
+        // number must be positive
+        // any number above 3999 needs to begin using the Vinculum.  Perhaps I'll add that later
         if (arabicNumeral < 1 || arabicNumeral > UPPER_THRESHOLD) {
             throw new IllegalArgumentException(String.format("{} is not representable in standard roman numerals", arabicNumeral));
         }
